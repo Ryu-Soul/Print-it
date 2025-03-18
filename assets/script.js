@@ -56,9 +56,11 @@ Flechedroite.addEventListener("click", function () {
 
 dots.forEach(dot => {
     dot.addEventListener("click", function () {
-        i = parseInt(dot.dataset.index);
-        updateslide();
-    });
+		dots.forEach(dot => dot.classList.remove ("dot_selected"));
+		dot.classList.add ("dot_selected");
+		i = parseInt(dot.dataset.index);
+		updateslide();
+    });	
 });
 
 
