@@ -140,10 +140,6 @@ header {
 	position: absolute;
 	bottom: 40px;
 	display: flex;
-	ul {
-		display: flex;
-		flex-direction: row;
-	}
 }
 .dot {
 	margin-inline: 5px;

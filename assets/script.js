@@ -22,12 +22,13 @@ const Flechegauche = document.getElementById("gauche")
 const Flechedroite = document.getElementById("droite")
 const slide = document.querySelector(".banner-img")
 const descriptionSlide = document.getElementById("descriptionSlide")
-const dots = document.querySelectorAll(".dot")
+const dots = document.querySelectorAll(".dot");
+const currentdot = document.querySelector(`.dot[data-index="${i}"]`);
+currentdot.classList.add("dot_selected");
 
 
 
 function dotslide(i) {
-	const dots = document.querySelectorAll(".dot");
 	dots.forEach(dot => {
 		dot.classList.remove("dot_selected");
 	});
@@ -55,12 +56,12 @@ Flechedroite.addEventListener("click", function () {
 })
 
 dots.forEach(dot => {
-    dot.addEventListener("click", function () {
-		dots.forEach(dot => dot.classList.remove ("dot_selected"));
-		dot.classList.add ("dot_selected");
+	dot.addEventListener("click", function () {
+		dots.forEach(dot => dot.classList.remove("dot_selected"));
+		dot.classList.add("dot_selected");
 		i = parseInt(dot.dataset.index);
 		updateslide();
-    });	
+	});
 });
 
 
